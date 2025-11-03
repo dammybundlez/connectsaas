@@ -1,0 +1,100 @@
+
+        body {
+            margin: 0;
+            font-family: 'Inter' ;
+        }
+
+             img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        div {
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: aqua;
+            position: relative;
+        }
+
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+        }
+        
+        .mobileview {
+            display: none;
+            background: rgba(51, 170, 51, 0.961);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            z-index: 20;
+        }
+
+        .hidden { display: none !important; }
+
+        li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: blue
+        }
+        #btn {
+            display: none;
+            background: transparent;
+            border: none;
+            padding: 4px;
+            cursor: pointer;
+         }
+
+
+        @media screen and (max-width: 768px ) {
+            .mobileview {
+                display: block;
+            }
+
+            .mobileview ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.9rem 0;
+                padding: 10px;
+            }
+
+            #btn { display: block;}
+
+            .mobileview a {
+                color: white;
+            }
+
+            nav ul{
+                display: none;
+            }
+        }
